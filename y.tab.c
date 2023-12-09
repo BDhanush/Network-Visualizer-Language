@@ -1375,7 +1375,7 @@ yyreduce:
 
   case 11:
 #line 48 "network_yacc.y"
-                                        { printf("%s -- %s [weight=%d];\n", (yyvsp[-4].str), (yyvsp[-3].str), (yyvsp[0].num)); }
+                                        { printf("%s -- %s [weight=%d][label=\"w=%d\"];\n", (yyvsp[-4].str), (yyvsp[-3].str), (yyvsp[0].num), (yyvsp[0].num)); }
 #line 1380 "y.tab.c"
     break;
 

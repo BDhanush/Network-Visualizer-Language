@@ -45,7 +45,7 @@ command:
     | NODE STR COLOR '=' STR { printf("%s [color=\"%s\"];\n", $2, $5); }
     | CONNECT STR STR { printf("%s -- %s;\n", $2, $3); }
     | CONNECT STR STR COLOR '=' STR { printf("%s -- %s [color=\"%s\"];\n", $2, $3, $6); }
-    | CONNECT STR STR WEIGHT '=' NUMBER { printf("%s -- %s [weight=%d];\n", $2, $3, $6); }
+    | CONNECT STR STR WEIGHT '=' NUMBER { printf("%s -- %s [weight=%d][label=\"w=%d\"];\n", $2, $3, $6, $6); }
     | LABEL STR NUMBER { printf("%s [label=\"%s\\n%d\"];\n", $2, $2, $3); }
     ;
 
