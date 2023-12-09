@@ -1,10 +1,12 @@
-graph G {
-A [label="A"];
+strict graph G {
+label="test";
+A [color="blue"];
 B [label="B"];
 C [label="C"];
-A -- B;
-B -- C;
+A -- B [weight=10];
+A -- B [color="pink"];
+A -- C [color="red"];
+A -- D [color="green"];
 A [label="A\n10"];
-C [label="C\n5"];
-A -- C [constraint=false];
+C [label="C\n10"];
 }

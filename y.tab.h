@@ -49,32 +49,38 @@ extern int yydebug;
 # define YYTOKENTYPE
   enum yytokentype
   {
-    NODE = 258,
-    CONNECT = 259,
-    DISCONNECT = 260,
-    MANIPULATE = 261,
-    NUMBER = 262,
-    ID = 263
+    TITLE = 258,
+    NODE = 259,
+    CONNECT = 260,
+    DISCONNECT = 261,
+    LABEL = 262,
+    COLOR = 263,
+    WEIGHT = 264,
+    NUMBER = 265,
+    STR = 266
   };
 #endif
 /* Tokens.  */
-#define NODE 258
-#define CONNECT 259
-#define DISCONNECT 260
-#define MANIPULATE 261
-#define NUMBER 262
-#define ID 263
+#define TITLE 258
+#define NODE 259
+#define CONNECT 260
+#define DISCONNECT 261
+#define LABEL 262
+#define COLOR 263
+#define WEIGHT 264
+#define NUMBER 265
+#define STR 266
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 16 "network_yacc.y"
+#line 19 "network_yacc.y"
 
     int num;
     char *str;
 
-#line 78 "y.tab.h"
+#line 84 "y.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

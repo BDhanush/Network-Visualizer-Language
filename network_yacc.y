@@ -1,4 +1,5 @@
 %{
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,23 +8,28 @@ extern int yylex();
 extern int yyparse();
 extern FILE *yyin;
 
-void yyerror(const char *s) {
+void yyerror(const char *s) 
+{
     fprintf(stderr, "Error: %s\n", s);
 }
 
 %}
 
-%union {
+%union 
+{
     int num;
     char *str;
 }
 
+%token TITLE
 %token NODE
 %token CONNECT
 %token DISCONNECT
-%token MANIPULATE
+%token LABEL
+%token COLOR
+%token WEIGHT
 %token <num> NUMBER
-%token <str> ID
+%token <str> STR
 
 %%
 
@@ -32,28 +38,36 @@ commands:
     ;
 
 command:
-    NODE ID { printf("%s [label=\"%s\"];\n", $2, $2); }
-    | CONNECT ID ID { printf("%s -- %s;\n", $2, $3); }
-    | DISCONNECT ID ID { printf("%s -- %s [constraint=false];\n", $2, $3); }
-    | MANIPULATE NUMBER ID { printf("%s [label=\"%s\\n%d\"];\n", $3, $3, $2); }
+    '='
+    | TITLE '=' STR { printf("label=\"%s\";\n", $3); }
+    | NODE STR { printf("%s [label=\"%s\"];\n", $2, $2); }
+    | NODE STR NUMBER { printf("%s [label=\"%s\\n%d\"];\n", $2, $2, $3); }
+    | NODE STR COLOR '=' STR { printf("%s [color=\"%s\"];\n", $2, $5); }
+    | CONNECT STR STR { printf("%s -- %s;\n", $2, $3); }
+    | CONNECT STR STR COLOR '=' STR { printf("%s -- %s [color=\"%s\"];\n", $2, $3, $6); }
+    | CONNECT STR STR WEIGHT '=' NUMBER { printf("%s -- %s [weight=%d];\n", $2, $3, $6); }
+    | LABEL STR NUMBER { printf("%s [label=\"%s\\n%d\"];\n", $2, $2, $3); }
     ;
 
 %%
 
-int main(int argc, char **argv) {
-    if (argc < 2) {
+int main(int argc, char **argv) 
+{
+    if (argc < 2) 
+    {
         fprintf(stderr, "Usage: %s input.txt > output.dot\n", argv[0]);
         return 1;
     }
 
     yyin = fopen(argv[1], "r");
-    if (!yyin) {
+    if (!yyin) 
+    {
         perror(argv[1]);
         return 1;
     }
 
-    printf("graph G {\n");
-    yyparse();
+    printf("strict graph G {\n");
+        yyparse();
     printf("}\n");
 
     fclose(yyin);

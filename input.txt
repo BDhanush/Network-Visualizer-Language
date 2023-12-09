@@ -1,8 +1,10 @@
-node A
+title=test
+node A color = blue
 node B
 node C
-connect A B
-connect B C
-manipulate 10 A
-manipulate 5 C
-disconnect A C
+connect A B weight=10
+connect A B color=pink
+connect A C color=red
+connect A D color=green
+addLabelNum A 10
+addLabelNum C 10
