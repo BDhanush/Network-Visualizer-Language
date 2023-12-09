@@ -1,0 +1,10 @@
+graph G {
+A [label="A"];
+B [label="B"];
+C [label="C"];
+A -- B;
+B -- C;
+A [label="A\n10"];
+C [label="C\n5"];
+A -- C [constraint=false];
+}

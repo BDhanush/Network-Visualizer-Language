@@ -1,0 +1,8 @@
+node A
+node B
+node C
+connect A B
+connect B C
+manipulate 10 A
+manipulate 5 C
+disconnect A C
