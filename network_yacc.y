@@ -24,7 +24,6 @@ void yyerror(const char *s)
 %token TITLE
 %token NODE
 %token CONNECT
-%token DISCONNECT
 %token LABEL
 %token COLOR
 %token WEIGHT

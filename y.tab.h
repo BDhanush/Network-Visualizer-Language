@@ -52,24 +52,22 @@ extern int yydebug;
     TITLE = 258,
     NODE = 259,
     CONNECT = 260,
-    DISCONNECT = 261,
-    LABEL = 262,
-    COLOR = 263,
-    WEIGHT = 264,
-    NUMBER = 265,
-    STR = 266
+    LABEL = 261,
+    COLOR = 262,
+    WEIGHT = 263,
+    NUMBER = 264,
+    STR = 265
   };
 #endif
 /* Tokens.  */
 #define TITLE 258
 #define NODE 259
 #define CONNECT 260
-#define DISCONNECT 261
-#define LABEL 262
-#define COLOR 263
-#define WEIGHT 264
-#define NUMBER 265
-#define STR 266
+#define LABEL 261
+#define COLOR 262
+#define WEIGHT 263
+#define NUMBER 264
+#define STR 265
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -80,7 +78,7 @@ union YYSTYPE
     int num;
     char *str;
 
-#line 84 "y.tab.h"
+#line 82 "y.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

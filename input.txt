@@ -1,7 +1,7 @@
 title=test
 node A color = blue
-node B
-node C
+node B 
+node C 5
 connect A B weight=10
 connect A B color=pink
 connect A C color=red
