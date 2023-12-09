@@ -41,7 +41,7 @@ Commands have to be sepearated by whitespace.
    Example: connect A B color=green`<br>`
 5. weight
    Command: connect node1 node2 weight=edgeWeight
-   Creates an edge between node1 and node2 with weight "edgeWeight".
+   Creates an edge between node1 and node2 with weight "edgeWeight". Default weight for each edge is 1.
    Example: connect A B weight=10`<br>`
 6. title
    Command: title=networkTitle
