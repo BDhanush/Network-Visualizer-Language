@@ -3,7 +3,8 @@
 ##### How to run:
 
 1. Type out the input in file "input.txt". <br>
-2. Run the "run.sh" bash file. <br>
+2. Run the "run.sh" bash file using the following command on your terminal. <br>
+   `bash run.sh`
    Refer to the keywords section for syntax. <br>
 
 run.sh
