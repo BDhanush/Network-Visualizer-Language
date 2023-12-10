@@ -7,10 +7,12 @@
    Refer to the keywords section for syntax.
 
 ##### Output:
+
 Output is a .dot file named "output.dot".
 The visual representation of the network is "output.png" file.
 
 ##### Notes:
+
 input.txt and all other file have to be placed in the same directory.
 Commands have to be sepearated by whitespace.
 
@@ -23,11 +25,11 @@ Commands have to be sepearated by whitespace.
 
    Command: node name integerLabel
    Creates a node "name" with an integer label.
-   Example: node A 10`<br>`
+   Example: node A 10 `<br>`
 2. addLabelNum
    Command: addLabelNum nodeName integerLabel
    Changes a node's integer label to a new integer label. If node doesn't exist it creates a new node.
-   Example: addLabelNum A 10`<br>`
+   Example: addLabelNum A 10 `<br>`
 3. connect
    Command: connect node1 node2
    Creates an edge between node1 and node2. If node doesn't exist it creates a new node.`<br>`
@@ -38,12 +40,27 @@ Commands have to be sepearated by whitespace.
 
    Command: connect node1 node2 color=colorName
    Creates an edge between node1 and node2 with color "colorName".
-   Example: connect A B color=green`<br>`
+   Example: connect A B color=green `<br>`
 5. weight
    Command: connect node1 node2 weight=edgeWeight
    Creates an edge between node1 and node2 with weight "edgeWeight". Default weight for each edge is 1.
-   Example: connect A B weight=10`<br>`
+   Example: connect A B weight=10 `<br>`
 6. title
    Command: title=networkTitle
    Adds title to the network/graph.
-   Example: title=graph`<br>`
+   Example: title=graph `<br>`
+
+##### Sample Input:
+
+```
+title=test
+node A color = blue
+node B 
+node C 5
+connect A B weight=10
+connect A B color=pink
+connect A C color=red
+connect A D color=green
+addLabelNum A 10
+addLabelNum C 10
+```

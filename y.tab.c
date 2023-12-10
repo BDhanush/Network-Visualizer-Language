@@ -66,7 +66,7 @@
 
 
 /* First part of user prologue.  */
-#line 1 "network_yacc.y"
+#line 1 "yacc.y"
 
 
 #include <stdio.h>
@@ -155,7 +155,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 19 "network_yacc.y"
+#line 19 "yacc.y"
 
     int num;
     char *str;
@@ -1336,49 +1336,49 @@ yyreduce:
   switch (yyn)
     {
   case 5:
-#line 41 "network_yacc.y"
+#line 41 "yacc.y"
                     { printf("label=\"%s\";\n", (yyvsp[0].str)); }
 #line 1342 "y.tab.c"
     break;
 
   case 6:
-#line 42 "network_yacc.y"
+#line 42 "yacc.y"
                { printf("%s [label=\"%s\"];\n", (yyvsp[0].str), (yyvsp[0].str)); }
 #line 1348 "y.tab.c"
     break;
 
   case 7:
-#line 43 "network_yacc.y"
+#line 43 "yacc.y"
                       { printf("%s [label=\"%s\\n%d\"];\n", (yyvsp[-1].str), (yyvsp[-1].str), (yyvsp[0].num)); }
 #line 1354 "y.tab.c"
     break;
 
   case 8:
-#line 44 "network_yacc.y"
+#line 44 "yacc.y"
                              { printf("%s [color=\"%s\"];\n", (yyvsp[-3].str), (yyvsp[0].str)); }
 #line 1360 "y.tab.c"
     break;
 
   case 9:
-#line 45 "network_yacc.y"
+#line 45 "yacc.y"
                       { printf("%s -- %s;\n", (yyvsp[-1].str), (yyvsp[0].str)); }
 #line 1366 "y.tab.c"
     break;
 
   case 10:
-#line 46 "network_yacc.y"
+#line 46 "yacc.y"
                                     { printf("%s -- %s [color=\"%s\"];\n", (yyvsp[-4].str), (yyvsp[-3].str), (yyvsp[0].str)); }
 #line 1372 "y.tab.c"
     break;
 
   case 11:
-#line 47 "network_yacc.y"
+#line 47 "yacc.y"
                                         { printf("%s -- %s [weight=%d][label=\"w=%d\"];\n", (yyvsp[-4].str), (yyvsp[-3].str), (yyvsp[0].num), (yyvsp[0].num)); }
 #line 1378 "y.tab.c"
     break;
 
   case 12:
-#line 48 "network_yacc.y"
+#line 48 "yacc.y"
                        { printf("%s [label=\"%s\\n%d\"];\n", (yyvsp[-1].str), (yyvsp[-1].str), (yyvsp[0].num)); }
 #line 1384 "y.tab.c"
     break;
@@ -1616,7 +1616,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 51 "network_yacc.y"
+#line 51 "yacc.y"
 
 
 int main(int argc, char **argv) 

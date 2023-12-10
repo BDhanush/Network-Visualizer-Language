@@ -466,8 +466,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "network_lex.l"
-#line 2 "network_lex.l"
+#line 1 "lex.l"
+#line 2 "lex.l"
 
 #include "y.tab.h"
 
@@ -689,7 +689,7 @@ YY_DECL
 		}
 
 	{
-#line 7 "network_lex.l"
+#line 7 "lex.l"
 
 
 #line 696 "lex.yy.c"
@@ -752,62 +752,62 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 9 "network_lex.l"
+#line 9 "lex.l"
 ; /* Ignore whitespace */
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 10 "network_lex.l"
+#line 10 "lex.l"
 { return TITLE; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 11 "network_lex.l"
+#line 11 "lex.l"
 { return NODE; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "network_lex.l"
+#line 12 "lex.l"
 { return CONNECT; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 13 "network_lex.l"
+#line 13 "lex.l"
 { return LABEL; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 14 "network_lex.l"
+#line 14 "lex.l"
 { return COLOR; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 15 "network_lex.l"
+#line 15 "lex.l"
 { return WEIGHT; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 16 "network_lex.l"
+#line 16 "lex.l"
 { return '='; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 17 "network_lex.l"
+#line 17 "lex.l"
 { yylval.num = atoi(yytext); return NUMBER; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 18 "network_lex.l"
+#line 18 "lex.l"
 { yylval.str = strdup(yytext); return STR; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 20 "network_lex.l"
+#line 20 "lex.l"
 { return yytext[0]; }  /*Any other character is returned as is */
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 22 "network_lex.l"
+#line 22 "lex.l"
 ECHO;
 	YY_BREAK
 #line 814 "lex.yy.c"
@@ -1815,7 +1815,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 22 "network_lex.l"
+#line 22 "lex.l"
 
 
 int yywrap() 
