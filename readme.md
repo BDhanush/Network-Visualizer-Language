@@ -6,12 +6,20 @@
 2. Run the "run.sh" bash file.
    Refer to the keywords section for syntax.
 
+run.sh
+
+```
+flex lex.l
+yacc -d yacc.y
+gcc lex.yy.c y.tab.c -o network_visualizer
+./network_visualizer input.txt > output.dot
+dot -Tpng output.dot -o output.png
+```
+
 ##### Output:
 
 Output is a .dot file named "output.dot".
-The visual representation of the network is "output.png" file.
-
-##### Notes:
+The visual representation of the network is "output.png" file.Notes:
 
 input.txt and all other file have to be placed in the same directory.
 Commands have to be sepearated by whitespace.
