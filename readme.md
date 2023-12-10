@@ -40,7 +40,7 @@ Commands have to be sepearated by whitespace.<br>
    Example: addLabelNum A 10 <br>
 3. connect<br>
    Command: connect node1 node2
-   Creates an edge between node1 and node2. If node doesn't exist it creates a new node.`<br>`
+   Creates an edge between node1 and node2. If node doesn't exist it creates a new node.<br>
 4. color<br>
    Command: node name color=colorName
    Creates a node "name" with color "colorName".
