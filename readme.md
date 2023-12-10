@@ -17,10 +17,10 @@ dot -Tpng output.dot -o output.png
 ```
 
 ##### Output:
-
 Output is a .dot file named "output.dot".
-The visual representation of the network is "output.png" file.Notes:
+The visual representation of the network is "output.png" file.
 
+##### Notes:
 input.txt and all other file have to be placed in the same directory.
 Commands have to be sepearated by whitespace.
 
