@@ -1,5 +1,17 @@
 # Language for Network Visualization
 
+##### Prerequisite:
+
+1. Install flex. <br>
+   for linux, <br>
+   `sudo apt-get install flex` <br>
+3. Install bison. <br>
+   for linux, <br>
+   `sudo apt-get install bison` <br>
+4. To run .dot files install. <br>
+   for linux, <br>
+   `sudo apt-get install graphviz`
+
 ##### How to run:
 
 1. Type out the input in file "input.txt". <br>
