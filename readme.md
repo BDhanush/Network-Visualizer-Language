@@ -5,10 +5,10 @@
 1. Install flex. <br>
    for linux, <br>
    `sudo apt-get install flex` <br>
-3. Install bison. <br>
+2. Install bison. <br>
    for linux, <br>
    `sudo apt-get install bison` <br>
-4. To run .dot files install. <br>
+3. To run .dot files install. <br>
    for linux, <br>
    `sudo apt-get install graphviz`
 
